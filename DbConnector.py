@@ -11,7 +11,7 @@ class DbConnector:
     Uses the root user to authenticate.
 
     Example:
-    HOST = "localhost:55000"  # Host IP or 'localhost' for local connections
+    HOST = "localhost:55000"   # Host IP or 'localhost' for local connections
     USER = "root"              # Root user
     PASSWORD = "test123"       # Password for the root user
     """

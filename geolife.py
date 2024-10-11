@@ -1,5 +1,4 @@
 import os
-import time
 from pprint import pprint
 from DbConnector import DbConnector
 from datetime import datetime
@@ -13,7 +12,7 @@ class ExampleProgram:
         self.connection = DbConnector()
         self.client = self.connection.client
         self.db = self.connection.db
-        # Comment these out after running the insertion function: 
+        # Comment the two lines below the comment after running the insertion function: 
         # insert_activities(), insert_users(), and insert_trackpoints()
         self.users_with_labels: list[str] = self.initialize_users_with_labels()
         self.valid_files: dict[str, bool] = self.initialize_valid_files()
@@ -623,16 +622,11 @@ def main():
     program = None
     try:
         program = ExampleProgram()
-
-        start_time = time.time()
-
-        program.task_10()
-
-        end_time = time.time()
-
-        elapsed_time = end_time - start_time
-        print()
-        print(f"Execution time: {elapsed_time:.4f} seconds")
+        program.create_coll()
+        program.insert_activities()
+        program.insert_users()
+        program.insert_trackpoints()
+        program.task_1() # Change this to whatever task you want displayed
 
     except Exception as e:
         print("ERROR: Failed to use database:", e)

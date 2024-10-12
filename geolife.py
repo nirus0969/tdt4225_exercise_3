@@ -12,7 +12,7 @@ class ExampleProgram:
         self.connection = DbConnector()
         self.client = self.connection.client
         self.db = self.connection.db
-        # Comment the two lines below the comment after running the insertion function: 
+        # Comment out the two lines below the comment after running the insertion function: 
         # insert_activities(), insert_users(), and insert_trackpoints()
         self.users_with_labels: list[str] = self.initialize_users_with_labels()
         self.valid_files: dict[str, bool] = self.initialize_valid_files()
